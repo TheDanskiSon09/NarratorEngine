@@ -104,7 +104,7 @@ class Terminal(SubSystem):
         return call(['osascript', '-e', script])
 
     @staticmethod
-    def draw_progress_bar(
+    def get_progress_bar(
             current_value,
             max_value,
             length,

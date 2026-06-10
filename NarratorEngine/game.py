@@ -1,11 +1,8 @@
 """The module contains implementation of game class"""
 
 from NarratorEngine.level import Level
-from NarratorEngine.entity import Entity
 from NarratorEngine.terminal import Terminal
-from NarratorEngine.player import Player
 from NarratorEngine.controller import Controller
-from NarratorEngine.logger import Logger
 
 
 class Game:
@@ -20,10 +17,7 @@ class Game:
             error_post_mortem_input: list = None,
             terminal_class=Terminal(),
             controller_class=Controller(),
-            entity_class=Entity(),
-            player_class=Player(),
             level_class=Level(),
-            logger_class=Logger(),
             extra_subsystems: list = None
     ) -> None:
         if not error_post_mortem_input:
@@ -39,10 +33,7 @@ class Game:
             self._init_subsystems([
                 terminal_class,
                 controller_class,
-                entity_class,
-                player_class,
-                level_class,
-                logger_class
+                level_class
             ])
             if extra_subsystems:
                 self._init_subsystems(extra_subsystems)

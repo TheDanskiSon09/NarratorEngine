@@ -1,4 +1,4 @@
-"""The module contains the """
+"""The module contains the implementation of utils functions"""
 
 import gzip
 from os.path import exists, join
@@ -57,8 +57,3 @@ def get_saved_game_existence(
 def get_colored_message(message: str):
     pass
 
-
-def quit_game(func):
-    from sys import exit
-    func()
-    exit()

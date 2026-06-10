@@ -5,19 +5,6 @@ from NarratorEngine.subsystem import SubSystem
 
 class Controller(SubSystem):
     subsystem_name = 'controller'
-    is_ignoring: bool = False
-
-    def set_ignore_input(
-            self,
-            ignore: bool
-    ) -> None:
-        pass
-
-    def _windows_ignore_input(self):
-        pass
-
-    def _unix_ignore_input(self):
-        pass
 
     def give_options(
             self,

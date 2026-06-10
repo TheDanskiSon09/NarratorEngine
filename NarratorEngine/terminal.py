@@ -35,6 +35,7 @@ class Terminal(SubSystem):
         if clear_after:
             self.clear_terminal()
         return ''
+    
 
     def set_window_title(self,
                          new_title: str
@@ -53,10 +54,12 @@ class Terminal(SubSystem):
                 self._fullscreen_linux()
             elif platform.system() == 'Darwin':
                 self._fullscreen_mac()
+                
 
     def clear_terminal(self) -> None:
         if self.graphic:
             system('cls' if name == 'nt' else 'clear')
+            
 
     @staticmethod
     def set_terminal_cursor_visible(visible: bool) -> None:
